@@ -4,13 +4,13 @@
 
   设计采用模块化架构，包含接口输入、乘法运算、检波滤波及接口输出四大模块，通过Multisim14.0仿真验证，输入设定参数的AM信号后，输出调幅信号呈现典型双边带特征，包络与1kHz调制信号同步，调幅系数约0.1，无明显失真；频谱分析显示464kHz与466kHz处出现对称边频分量，谐波失真度低于0.5%，抗干扰能力良好，附有板子和仿真。
 
-![pcb](image\pcb.png)
+![pcb](image/pcb.png)
 
 ## 实验设计
 
   整体设计思路为：通过接口模块接入输入信号与电源，利用模拟乘法器完成信号运算，再通过检波滤波模块提取运算结果的包络，最终通过接口模块输出处理后的信号。
 
-![flowchart ](D:\desktop\Git\high-frequency circuits\image\flowchart .png)
+![flowchart](image/flowchart.png)
 
 ## 仿真系统测试
 
@@ -32,11 +32,11 @@
 
 测量仪器：4通道示波器XSC1（时域波形观测）、频谱分析仪XSA1（频率分量分析）。
 
-![simulate2](D:\desktop\Git\high-frequency circuits\image\simulate2.png)
+![simulate2](image/simulate2.png)
 
 ### 仿真结果分析与验证
 
-![simulate3](D:\desktop\Git\high-frequency circuits\image\simulate3.png)
+![simulate3](image/simulate3.png)
 
 仿真启动后，示波器观测到的三路信号波形如图所示，关键数据与特征分析如下：
 
@@ -58,7 +58,7 @@
 
 #### 频谱分析结果
 
-![simulate](D:\desktop\Git\high-frequency circuits\image\simulate.png)
+![simulate](image/simulate.png)
 
 通过频谱分析仪XSA1观测输出信号频谱，结果显示：
 
@@ -75,7 +75,7 @@
 
 ### 硬件测试
 
-![hardware](D:\desktop\Git\high-frequency circuits\image\hardware.png)
+![hardware](image/hardware.png)
 
   通过示波器双通道同步观测输入 AM 信号与输出检波信号，如图 所示，测试结果如下： 
 
@@ -85,6 +85,6 @@
 
 波形上升沿响应时间 ≤10 μs，下降沿放电平稳，验证了 RC 低通网络（10nF 电容 + 10kΩ 电阻，时间常数 100 μs）的参数合理性，满足“包络实时跟踪”设计目标。
 
-![simulate4](D:\desktop\Git\high-frequency circuits\image\simulate4.png)
+![simulate4](image/simulate4.png)
 
  
